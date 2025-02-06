@@ -8,7 +8,7 @@ import { LocationEncounter, Pokemon } from '../models/poke-api';
 })
 export class PokemonService {
 
-  private apiUrl = ''
+  private apiUrl = 'https://pokeapi.co/api/v2/';
 
   constructor(private http: HttpClient) { }
 
