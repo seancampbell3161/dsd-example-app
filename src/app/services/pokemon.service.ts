@@ -16,7 +16,7 @@ export class PokemonService {
     return this.http.get<Pokemon | null>(`${this.apiUrl}pokemon/${name}`);
   }
 
-  getLocationEncounters(id: number) {
+  getLocationEncounters(id: number): Observable<LocationEncounter | null> {
     return this.http.get<LocationEncounter | null>(`${this.apiUrl}pokemon/${id}/encounters`);
   }
 }
