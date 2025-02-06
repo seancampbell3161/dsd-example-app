@@ -1,0 +1,12 @@
+.pokemon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(20, 155, 200, 0.8);
+}
+
+.pokemon-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

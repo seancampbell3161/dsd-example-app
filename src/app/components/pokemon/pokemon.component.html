@@ -1,0 +1,22 @@
+<div class="pokemon-container">
+    <form>
+        <input type="text" [formControl]="pokemonSearch" />
+        <button type="button" (click)="search()">Search</button>
+    </form>
+    @if (pokemon) {
+        <div class="pokemon-stats">
+            <h1>{{pokemon.name}}</h1>
+            <img src="{{pokemon.sprites.front_default}}" />
+            <p>#{{pokemon.id}}</p>
+        </div>
+
+        @if (locationEncounters) {
+            <div class="location-encounters">
+                <h3>Location Encounters</h3>
+                @for (location of locationEncounters; track $index) {
+                    <p>{{location.location_area.name}}</p>
+                }
+            </div>
+        }
+    }
+</div>
